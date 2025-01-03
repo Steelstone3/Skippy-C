@@ -1,10 +1,10 @@
-# C# Project Template
+# Skippy C
 
-A template project for creating C# applications
+Skippy C is an interpretted language built with C#
 
-## Running Example
+## Running Skippy C
 
-> cd ~/C-Sharp-Project-Template/Example
+> cd ~/Skippy-C/SkippyC
 >
 > dotnet restore
 >
@@ -12,9 +12,9 @@ A template project for creating C# applications
 >
 > dotnet run
 
-## Tests
+## Testing Skippy C
 
-> cd ~/C-Sharp-Project-Template/ExampleTests
+> cd ~/Skippy-C/SkippyCTests
 >
 > dotnet restore
 >
@@ -22,8 +22,10 @@ A template project for creating C# applications
 >
 > dotnet test
 
+## Specification
+
 ## Dependencies
 
 Follow the steps for installing dotnet runtime for your given operating system.
 
-> <https://dotnet.microsoft.com/en-us/download/dotnet/7.0>
+> <https://dotnet.microsoft.com/en-us/download/dotnet/9.0>
