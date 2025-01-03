@@ -5,6 +5,9 @@ namespace SkippyC.Interpretter;
 
     public enum Token
     {
+        Code,
+        GreaterThanOrEqualTo,
+        LessThanOrEqualTo,
         Equals,
     }
 
@@ -14,12 +17,21 @@ namespace SkippyC.Interpretter;
         {
             List<Token> tokens = new List<Token>();
 
-            // switch (input)
-            // {
-
-            //     default:
-            //         tokens.Add(Token.Equals);
-            // }
+            switch (input)
+            {
+                case ">=":
+                    tokens.Add(Token.GreaterThanOrEqualTo);
+                    break;
+                case "<=":
+                    tokens.Add(Token.LessThanOrEqualTo);
+                    break;
+                case "=":
+                    tokens.Add(Token.Equals);
+                    break;
+                default:
+                    tokens.Add(Token.Code);
+                    break;
+            }
 
             tokens.Add(Token.Equals);
 

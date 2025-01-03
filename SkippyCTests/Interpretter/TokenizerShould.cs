@@ -9,7 +9,10 @@ public class TokenizerShould
     private readonly ITokenizer tokenizer = new Tokenizer();
 
     [Theory]
+    [InlineData(">=", Token.GreaterThanOrEqualTo)]
+    [InlineData("<=", Token.LessThanOrEqualTo)]
     [InlineData("=", Token.Equals)]
+    [InlineData("", Token.Code)]
     public void InterpretToken(string input, Token token)
     {
         // Given
@@ -20,6 +23,7 @@ public class TokenizerShould
 
         // Then
         Assert.NotEmpty(tokens);
+        Assert.Equivalent(expectedTokens, tokens);
     }
 
 }
