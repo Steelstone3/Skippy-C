@@ -9,6 +9,7 @@ public class TokenizerShould
     private readonly ITokenizer tokenizer = new Tokenizer();
 
     [Theory]
+    [InlineData("structure", Token.Structure)]
     [InlineData(">=", Token.GreaterThanOrEqualTo)]
     [InlineData("<=", Token.LessThanOrEqualTo)]
     [InlineData("=", Token.Equals)]

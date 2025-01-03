@@ -6,6 +6,7 @@ namespace SkippyC.Interpretter;
     public enum Token
     {
         Code,
+        Structure,
         GreaterThanOrEqualTo,
         LessThanOrEqualTo,
         Equals,
@@ -19,6 +20,9 @@ namespace SkippyC.Interpretter;
 
             switch (input)
             {
+                case "structure":
+                    tokens.Add(Token.Structure);
+                    break;
                 case ">=":
                     tokens.Add(Token.GreaterThanOrEqualTo);
                     break;
