@@ -25,16 +25,16 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 7.0.*
+        dotnet-version: 9.0.*
     - name: Install app dependencies
-      working-directory: ./Example
+      working-directory: ./SkippyC
       run: dotnet restore
     - name: Build
-      working-directory: ./Example
+      working-directory: ./SkippyC
       run: dotnet build --configuration Release --no-restore
     - name: Install test dependencies
-      working-directory: ./ExampleTests
+      working-directory: ./SkippyCTests
       run: dotnet restore
     - name: Test
-      working-directory: ./ExampleTests
+      working-directory: ./SkippyCTests
       run: dotnet test --no-restore --verbosity normal
