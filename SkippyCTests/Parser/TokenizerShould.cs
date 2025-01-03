@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using SkippyC.Interpretter;
+using SkippyC.Parser;
 using Xunit;
 
-namespace SkippyCTests.Interpretter;
+namespace SkippyCTests.Parser;
 
 public class TokenizerShould
 {
@@ -27,4 +27,5 @@ public class TokenizerShould
         Assert.Equivalent(expectedTokens, tokens);
     }
 
+    
 }
